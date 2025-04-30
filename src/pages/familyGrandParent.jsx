@@ -123,6 +123,24 @@ function FamilyGrandParent() {
           </div>
         </section>
 
+        <section className="bottom-cards">
+      <div className="cards-container">
+      <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
+        <div className="card-icon-wrapper" >
+          <div className="card-icon">📚</div>
+        </div>
+        <h3>Education Hub</h3>
+      </div>
+
+      <div className="card child-pot-card purple-card">
+        <div className="card-icon-wrapper">
+          <div className="card-icon">📊</div>
+        </div>
+        <h3>Family spending insights</h3>
+      </div>
+    </div>
+        </section>
+
         <section className="feature-section">
           <h2>Family Leaderboard</h2>
           <div className="leaderboard-grid">
@@ -169,25 +187,6 @@ function FamilyGrandParent() {
             </div>
             <div className="payment-right">
               <span className="payment-amount">£100</span>
-            </div>
-          </div>
-        </section>
-        
-
-        <section className="bottom-cards">
-          <div className="cards-container">
-            <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
-              <div className="card-icon-wrapper">
-                <div className="card-icon">📚</div>
-              </div>
-              <h3>Education Hub</h3>
-            </div>
-
-            <div className="card child-pot-card purple-card" onClick={() => navigate('/insights')}>
-              <div className="card-icon-wrapper">
-                <div className="card-icon">📊</div>
-              </div>
-              <h3>Family spending insights</h3>
             </div>
           </div>
         </section>

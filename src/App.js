@@ -10,6 +10,7 @@ import SaveMatch from './pages/saveMatch';
 import SavingGoals from './pages/savingGoals';
 import HelpGuide from './pages/helpGuide';
 import Insights from './pages/insights';
+import SavingGoalsChild from './pages/savingGoalsChild';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/everyday" element={<Everyday />} />
         <Route path="/save-match" element={<SaveMatch />} />
         <Route path="/saving-goals" element={<SavingGoals />} />
+        <Route path="/saving-goals-child" element={<SavingGoalsChild />} />
         <Route path="/help-guide" element={<HelpGuide />} />
         <Route path="/insights" element={<Insights />} />
       </Routes>
