@@ -30,7 +30,8 @@ function Insights() {
     <div className="bank-app">
       <header className="app-header">
         <div className="header-icons">
-          <span className="icon">✉️</span>
+        <span className="icon" onClick={() => navigate(-1)}>←</span>
+
           <span className="greeting">Hi Alex</span>
           <div className="right-icons">
             <span className="icon">❓</span>
@@ -48,7 +49,6 @@ function Insights() {
 
       <main className="account-summary">
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-          <button className="back-button" onClick={() => navigate(-1)}>←</button>
           <h2>Family Spending Insights</h2>
         </div>
 

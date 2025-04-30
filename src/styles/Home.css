@@ -1039,3 +1039,16 @@
   margin: 0.2rem 0 0;
   color: #555;
 }
+
+.leaderboard-grid {
+  display: flex;
+  justify-content: center; /* Center the leaderboard horizontally */
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+
