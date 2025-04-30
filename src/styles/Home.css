@@ -150,6 +150,16 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.space-card.green-bg {
+  background-color: #11b67a;
+  color: white;
+}
+
+.space-card.green-bg .space-details p,
+.space-card.green-bg .chevron {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .space-icon {
   width: 40px;
   height: 40px;
@@ -159,14 +169,15 @@
   justify-content: center;
   margin-right: 16px;
   font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .green {
-  background-color: #e8f5e9;
+  background-color: transparent;
 }
 
 .light-green {
-  background-color: #f1f8e9;
+  background-color: #c7ffc6;
 }
 
 .orange {

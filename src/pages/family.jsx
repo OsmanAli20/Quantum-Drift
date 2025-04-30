@@ -42,8 +42,8 @@ function Family() {
 
         <section className="spaces-section">
           <h2>Family Features</h2>
-          <div className="space-card">
-            <div className="space-icon green">👨‍👩‍👧‍👦</div>
+          <div className="space-card green-bg">
+            <div className="space-icon light-green">👨‍👩‍👧‍👦</div>
             <div className="space-details">
               <h3>Family Sharing</h3>
               <p>Share accounts and manage family finances together</p>

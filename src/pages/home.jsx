@@ -59,8 +59,8 @@ function Home() {
         <section className="spaces-section">
           <h2>Your spaces</h2>
           
-          <div className="space-card" onClick={() => navigate('/bank360')}>
-            <div className="space-icon green">🏦</div>
+          <div className="space-card green-bg" onClick={() => navigate('/bank360')}>
+            <div className="space-icon light-green">🏦</div>
             <div className="space-details">
               <h3>Lloyds Bank 360</h3>
               <p>Your bespoke benefits, like free financial coaching</p>
