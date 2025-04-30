@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
 function FamilyGrandParent() {
   const navigate = useNavigate();
+  const [showNotification, setShowNotification] = useState(true);
+
+  const handleSendMoney = () => {
+    navigate('/send-money');
+    setShowNotification(false);
+  };
 
   return (
     <div className="bank-app">
@@ -169,21 +175,21 @@ function FamilyGrandParent() {
         
 
         <section className="bottom-cards">
-      <div className="cards-container">
-      <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
-        <div className="card-icon-wrapper" >
-          <div className="card-icon">📚</div>
-        </div>
-        <h3>Education Hub</h3>
-      </div>
+          <div className="cards-container">
+            <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
+              <div className="card-icon-wrapper">
+                <div className="card-icon">📚</div>
+              </div>
+              <h3>Education Hub</h3>
+            </div>
 
-      <div className="card child-pot-card purple-card" onClick={() => navigate('/insights')}>
-        <div className="card-icon-wrapper">
-          <div className="card-icon">📊</div>
-        </div>
-        <h3>Family spending insights</h3>
-      </div>
-    </div>
+            <div className="card child-pot-card purple-card" onClick={() => navigate('/insights')}>
+              <div className="card-icon-wrapper">
+                <div className="card-icon">📊</div>
+              </div>
+              <h3>Family spending insights</h3>
+            </div>
+          </div>
         </section>
       </main>
     </div>
