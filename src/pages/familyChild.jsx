@@ -26,43 +26,44 @@ function FamilyParent() {
 
       <main className="account-summary">
         <h2>Family Banking</h2>
-
         <div className="account-card">
           <div className="account-details">
-            <span className="account-name">Family Savings</span>
-            <span className="account-number">00-00-00 / 87654321</span>
-          </div>
-          <span className="account-balance">£10,000.00</span>
-        </div>
-
-        <div className="account-card">
-          <div className="account-details">
-            <span className="account-name">Children's Account</span>
+            <span className="account-name">Children's Current Account (A Jones)</span>
             <span className="account-number">00-00-00 / 98765432</span>
           </div>
-          <span className="account-balance">£2,500.00</span>
-          <button className="request-button">Request Money</button>
+          <span className="account-balance">£500.00</span>
         </div>
 
-        {/* Family Sharing */}
-        <section className="feature-section">
-          <h2>Family Sharing</h2>
-          <div className="space-card green-bg">
-            <div className="space-icon light-green">👨‍👩‍👧‍👦</div>
-            <div className="space-details">
-              <p>Share accounts and manage family finances together</p>
-            </div>
+        <div className="account-card">
+          <div className="account-details">
+            <span className="account-name">Junior ISA (A Jones)</span>
+            <span className="account-number">00-00-00 / 98765432</span>
           </div>
-        </section>
+          <span className="account-balance">£1,500</span>
+        </div>
+
+        <div className="account-actions">
+          <button className="action-button">Request Money</button>
+          <button className="action-button">Add Money to Savings</button>
+        </div>
 
         <section className="feature-section">
         <h2>Savings Goals</h2>
+
+        <div className="space-card" onClick={() => navigate('/saving-goals-child')} style={{ cursor: 'pointer' }}>
+            <div className="space-icon light-green">🎯</div>
+            <div className="space-details">
+              <h3>Family Holiday Savings Goal</h3>
+              <p>Track family savings and contributions</p>
+            </div>
+            <span className="chevron">›</span>
+          </div>
 
         {/* Nintendo Switch Goal */}
         <div className="space-card">
           <div className="space-icon light-green">🎮</div>
           <div className="space-details">
-            <h3>Nintendo Switch Pot</h3>
+            <h3>Nintendo Switch Saving Goal</h3>
             <p>£150 saved of £300</p>
             <div className="progress-bar">
               <div className="progress" style={{ width: '50%' }}></div>
@@ -74,8 +75,8 @@ function FamilyParent() {
         <div className="space-card lock-card">
           <div className="space-icon light-green">🔒</div>
           <div className="space-details">
-            <h3>Locked Pots</h3>
-            <p>Holiday Savings: £500 (locked by parents)</p>
+            <h3>University Savings (Locked)</h3>
+            <p> £4000 (locked by parents)</p>
           </div>
         </div>
       </section>
@@ -83,29 +84,46 @@ function FamilyParent() {
         {/* Leaderboard */}
         <section className="feature-section">
           <h2>Leaderboard</h2>
-          <div className="space-card">
-            <div className="space-icon light-green">🏆</div>
-            <div className="space-details">
-              <ul className="leaderboard">
-                <li>Sam – £1,200</li>
-                <li>Jess – £950</li>
-                <li>Max – £600</li>
-              </ul>
+          <div className="leaderboard-grid">
+            <div className="leaderboard-card gold">
+              <div className="place-icon">🥇</div>
+              <div className="child-name">Sam</div>
+              <div className="child-amount">£1,200</div>
+            </div>
+            <div className="leaderboard-card silver">
+              <div className="place-icon">🥈</div>
+              <div className="child-name">Jess</div>
+              <div className="child-amount">£950</div>
+            </div>
+            <div className="leaderboard-card bronze">
+              <div className="place-icon">🥉</div>
+              <div className="child-name">Max</div>
+              <div className="child-amount">£600</div>
             </div>
           </div>
         </section>
 
         {/* Upcoming Payments */}
         <section className="feature-section">
-          <h2>Upcoming Payments</h2>
-          <div className="space-card">
-            <div className="space-icon light-green">📅</div>
-            <div className="space-details">
-              <p>Nintendo Switch Pot: £20 on May 5th</p>
-              <p>Holiday Pot: £30 on May 12th</p>
-            </div>
+        <h2>Upcoming Payments</h2>
+
+        <div className="payment-card">
+          <h3>🎮 Nintendo Switch Pot</h3>
+          <div className="payment-info">
+            <span className="payment-amount">£20</span>
+            <span className="payment-date">Due: May 5th</span>
           </div>
-        </section>
+        </div>
+
+        <div className="payment-card">
+          <h3>🏖️ Holiday Pot</h3>
+          <div className="payment-info">
+            <span className="payment-amount">£30</span>
+            <span className="payment-date">Due: May 12th</span>
+          </div>
+        </div>
+      </section>
+
 
       
       </main>

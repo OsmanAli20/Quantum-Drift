@@ -43,3 +43,50 @@ nav {
   background-color: #76c7c0;
   border-radius: 5px;
 }
+
+.leaderboard-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.leaderboard-card {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 100px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-direction: column;
+}
+
+.leaderboard-card .place-icon {
+  font-size: 1.8rem;
+}
+
+.leaderboard-card .child-name {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.leaderboard-card .child-amount {
+  color: #444;
+  margin-top: 0.25rem;
+}
+
+.gold {
+  background-color: #fff8e1;
+}
+
+.silver {
+  background-color: #f0f0f0;
+}
+
+.bronze {
+  background-color: #fbe9e7;
+}
+
+h2 {
+  padding: 1rem 0; /* 1rem top and bottom, 0 left and right */
+}
+
