@@ -639,3 +639,26 @@
 .guide-duration {
   color: #11b67a;
 } 
+
+.bottom-cards {
+  display: flex;
+  gap: 20px; 
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  padding: 20px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  max-width: 300px;
+}
+
+.pink-card {
+  background-color: #F5B2F2; 
+}
+
+.purple-card {
+  background-color: #A19FFF; 
+}

@@ -10,7 +10,7 @@ function FamilyParent() {
       <header className="app-header">
         <div className="header-icons">
           <span className="icon">✉️</span>
-          <span className="greeting">Hi Alex</span>
+          <span className="greeting">Hi Alice</span>
           <div className="right-icons">
             <span className="icon">❓</span>
             <span className="icon">👥</span>
@@ -140,7 +140,6 @@ function FamilyParent() {
           <h3>Learn more about money</h3>
         </div>
       </section>
-      
       </main>
     </div>
   );
