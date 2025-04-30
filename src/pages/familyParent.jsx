@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
-function Family() {
+function FamilyParent() {
   const navigate = useNavigate();
 
   return (
@@ -65,4 +65,4 @@ function Family() {
   );
 }
 
-export default Family; 
+export default FamilyParent; 
