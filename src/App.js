@@ -1,27 +1,17 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home';
-import About from './pages/about';
+import Everyday from './pages/everyday';
+import SaveInvest from './pages/save-invest';
 
 function App() {
   return (
     <div className="App">
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
-
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/everyday" element={<Everyday />} />
+        <Route path="/save-invest" element={<SaveInvest />} />
       </Routes>
     </div>
   );

@@ -1,0 +1,265 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+.bank-app {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.app-header {
+  padding: 16px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.greeting {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.right-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.tab-bar {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.tab-button {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  color: #666;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tab-button:hover {
+  color: #000;
+}
+
+.tab-button.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #024;
+}
+
+/* Main content area */
+.account-summary {
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.account-card {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.account-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.account-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-name {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.account-number {
+  color: #666;
+  font-size: 14px;
+}
+
+.account-balance {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Spaces section */
+.spaces-section {
+  padding: 0 20px;
+  margin-top: 32px;
+}
+
+.spaces-section h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.space-card {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.space-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.space-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  font-size: 20px;
+}
+
+.green {
+  background-color: #e8f5e9;
+}
+
+.light-green {
+  background-color: #f1f8e9;
+}
+
+.orange {
+  background-color: #fff3e0;
+}
+
+.space-details {
+  flex: 1;
+}
+
+.space-details h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.space-details p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.chevron {
+  color: #666;
+  font-size: 24px;
+}
+
+/* Desktop styles (default) */
+@media screen and (min-width: 1024px) {
+  .account-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .spaces-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .spaces-section h2 {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .bank-app {
+    max-width: 90%;
+  }
+
+  .account-summary {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .spaces-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .spaces-section h2 {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  .bank-app {
+    max-width: 100%;
+  }
+
+  .account-summary {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .spaces-section {
+    padding: 0 16px;
+  }
+
+  .account-card,
+  .space-card {
+    width: 100%;
+  }
+
+  .tab-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .tab-bar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+} 
