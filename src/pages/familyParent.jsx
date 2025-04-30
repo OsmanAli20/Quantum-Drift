@@ -39,7 +39,7 @@ function FamilyParent() {
             <span className="account-name">Family Savings</span>
             <span className="account-number">00-00-00 / 87654321</span>
           </div>
-          <span className="account-balance">£10,000.00</span>
+          <span className="account-balance">£4650.00</span>
         </div>
 
         <div className="account-card">
@@ -52,15 +52,15 @@ function FamilyParent() {
         
         <div className="account-card">
           <div className="account-details">
-            <span className="account-name">Children's Account</span>
+            <span className="account-name">Children's Current Account (A Jones)</span>
             <span className="account-number">00-00-00 / 98765432</span>
           </div>
-          <span className="account-balance">£100.00</span>
+          <span className="account-balance">£500.00</span>
         </div>
 
         <div className="account-card">
           <div className="account-details">
-            <span className="account-name">Children's Account</span>
+            <span className="account-name">Children's Current Account (H Jones)</span>
             <span className="account-number">00-00-00 / 98765432</span>
           </div>
           <span className="account-balance">£130.00</span>
@@ -95,9 +95,20 @@ function FamilyParent() {
             <span className="chevron">›</span>
           </div>
         </section>
+
+        <section className="bottom-cards">
+          <div className="card shared-pot-card">
+            <h3>Learn more about money</h3>
+          </div>
+            
+          <div className="card child-pot-card">
+            <h3>Family spending insights</h3>
+          </div>
+        </section>
+
       </main>
     </div>
   );
-}
+};
 
 export default FamilyParent; 

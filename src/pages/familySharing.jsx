@@ -9,6 +9,7 @@ function FamilySharing() {
     <div className="bank-app">
       <header className="app-header">
         <div className="header-icons">
+        <button className="back-button" onClick={() => navigate(-1)}>←</button>
           <span className="icon">✉️</span>
           <span className="greeting">Hi Alex</span>
           <div className="right-icons">
@@ -36,7 +37,7 @@ function FamilySharing() {
         <h2>Family Pots</h2>
         <div className="account-card">
           <div className="account-details">
-            <span className="account-name">Children's Pot</span>
+            <span className="account-name">Children's Pot (A Jones)</span>
             <span className="account-number">Total Contributions</span>
           </div>
           <span className="account-balance">£50.00</span>
@@ -44,7 +45,7 @@ function FamilySharing() {
 
         <div className="account-card">
           <div className="account-details">
-            <span className="account-name">Children's Pot</span>
+            <span className="account-name">Children's Pot (H Jones)</span>
             <span className="account-number">Total Contributions</span>
           </div>
           <span className="account-balance">£73.00</span>

@@ -11,7 +11,7 @@ function SaveMatch() {
 
   useEffect(() => {
     // TODO: Replace with actual API call
-    setChildSavings(1000); // Example value
+    setChildSavings(1000);
   }, []);
 
   const handleMonthlyMatchChange = (event) => {
