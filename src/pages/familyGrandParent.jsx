@@ -15,6 +15,7 @@ function FamilyGrandParent() {
     <div className="bank-app">
       {showNotification && (
         <div className="notification-popup">
+          <button className="notification-close" onClick={() => setShowNotification(false)}>×</button>
           <div className="notification-icon">🎁</div>
           <div className="notification-content">
             <div className="notification-title">Birthday Reminder!</div>
