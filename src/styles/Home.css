@@ -774,6 +774,9 @@
   position: relative;
   overflow: hidden;
 }
+.pink-card {
+  background-color: #F5B2F2;
+}
 
 .purple-card {
   background-color: #A19FFF; 
