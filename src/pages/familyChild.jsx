@@ -95,6 +95,24 @@ function FamilyParent() {
         </div>
       </section>
 
+      <section className="bottom-cards">
+      <div className="cards-container">
+      <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
+        <div className="card-icon-wrapper" >
+          <div className="card-icon">📚</div>
+        </div>
+        <h3>Education Hub</h3>
+      </div>
+
+      <div className="card child-pot-card purple-card" onClick={() => navigate('/insights')}>
+        <div className="card-icon-wrapper">
+          <div className="card-icon">📊</div>
+        </div>
+        <h3>Family spending insights</h3>
+      </div>
+    </div>
+        </section>
+
         {/* Leaderboard */}
         <section className="feature-section">
           <h2>Leaderboard</h2>
@@ -147,23 +165,6 @@ function FamilyParent() {
           </div>
         </div>
       </section>
-      <section className="bottom-cards">
-      <div className="cards-container">
-      <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
-        <div className="card-icon-wrapper" >
-          <div className="card-icon">📚</div>
-        </div>
-        <h3>Education Hub</h3>
-      </div>
-
-      <div className="card child-pot-card purple-card" onClick={() => navigate('/insights')}>
-        <div className="card-icon-wrapper">
-          <div className="card-icon">📊</div>
-        </div>
-        <h3>Family spending insights</h3>
-      </div>
-    </div>
-        </section>
       </main>
     </div>
   );
