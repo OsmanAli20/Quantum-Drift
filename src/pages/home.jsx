@@ -18,8 +18,8 @@ function Home() {
         </div>
         <div className="tab-bar">
           <button className="tab-button active">Summary</button>
+          <button className="tab-button" onClick={() => navigate('/family')}>Family</button>
           <button className="tab-button" onClick={() => navigate('/everyday')}>Everyday</button>
-          <button className="tab-button" onClick={() => navigate('/save-invest')}>Save &</button>
         </div>
       </header>
 

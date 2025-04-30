@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
-function Everyday() {
+function Family() {
   const navigate = useNavigate();
 
   return (
@@ -18,42 +18,44 @@ function Everyday() {
         </div>
         <div className="tab-bar">
           <button className="tab-button" onClick={() => navigate('/')}>Summary</button>
-          <button className="tab-button" onClick={() => navigate('/family')}>Family</button>
-          <button className="tab-button active">Everyday</button>
+          <button className="tab-button active">Family</button>
+          <button className="tab-button" onClick={() => navigate('/everyday')}>Everyday</button>
         </div>
       </header>
       <main className="account-summary">
-        <h2>Everyday Banking</h2>
+        <h2>Family Banking</h2>
         <div className="account-card">
           <div className="account-details">
-            <span className="account-name">Quick Payments</span>
-            <p>Send money to your frequent contacts</p>
+            <span className="account-name">Family Savings</span>
+            <span className="account-number">00-00-00 / 87654321</span>
           </div>
+          <span className="account-balance">£10,000.00</span>
         </div>
-
+        
         <div className="account-card">
           <div className="account-details">
-            <span className="account-name">Spending Insights</span>
-            <p>View your spending patterns and categories</p>
+            <span className="account-name">Children's Account</span>
+            <span className="account-number">00-00-00 / 98765432</span>
           </div>
+          <span className="account-balance">£2,500.00</span>
         </div>
 
         <section className="spaces-section">
-          <h2>Tools & Services</h2>
+          <h2>Family Features</h2>
           <div className="space-card">
-            <div className="space-icon light-green">📊</div>
+            <div className="space-icon green">👨‍👩‍👧‍👦</div>
             <div className="space-details">
-              <h3>Budget Planner</h3>
-              <p>Create and manage your monthly budget</p>
+              <h3>Family Sharing</h3>
+              <p>Share accounts and manage family finances together</p>
             </div>
             <span className="chevron">›</span>
           </div>
 
           <div className="space-card">
-            <div className="space-icon orange">🔔</div>
+            <div className="space-icon light-green">🎯</div>
             <div className="space-details">
-              <h3>Payment Reminders</h3>
-              <p>Never miss a payment with custom alerts</p>
+              <h3>Savings Goals</h3>
+              <p>Set and track family savings targets</p>
             </div>
             <span className="chevron">›</span>
           </div>
@@ -63,4 +65,4 @@ function Everyday() {
   );
 }
 
-export default Everyday; 
+export default Family; 
