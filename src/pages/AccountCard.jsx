@@ -6,7 +6,7 @@ const AccountCard = () => {
 
   useEffect(() => {
     // Replace this URL with your actual API endpoint
-    fetch("http://127.0.0.1:3001/api/v1/account/1")
+    fetch("http://127.0.0.1:3001/api/v1/accounts/1")
       .then((res) => res.json())
       .then((data) => {
         setAccount(data);
