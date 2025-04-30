@@ -6,6 +6,7 @@ import Everyday from './pages/everyday';
 import FamilyParent from './pages/familyParent';
 import SaveMatch from './pages/saveMatch';
 import FamilyChild from './pages/familyChild'; 
+import SavingGoals from './pages/savingGoals';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/family-child" element={<FamilyChild/>} />
         <Route path="/everyday" element={<Everyday />} />
         <Route path="/save-match" element={<SaveMatch />} />
+        <Route path="/saving-goals" element={<SavingGoals />} />
       </Routes>
     </div>
   );

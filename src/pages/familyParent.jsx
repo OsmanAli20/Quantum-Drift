@@ -52,11 +52,11 @@ function FamilyParent() {
             <span className="chevron">›</span>
           </div>
 
-          <div className="space-card">
+          <div className="space-card" onClick={() => navigate('/saving-goals')} style={{ cursor: 'pointer' }}>
             <div className="space-icon light-green">🎯</div>
             <div className="space-details">
               <h3>Savings Goals</h3>
-              <p>Set and track family savings targets</p>
+              <p>Track family savings and contributions</p>
             </div>
             <span className="chevron">›</span>
           </div>
