@@ -1,33 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
 function FamilyGrandParent() {
   const navigate = useNavigate();
-  const [showNotification, setShowNotification] = useState(true);
-
-  const handleSendMoney = () => {
-    navigate('/send-money');
-    setShowNotification(false);
-  };
 
   return (
     <div className="bank-app">
-      {showNotification && (
-        <div className="notification-popup">
-          <div className="notification-icon">🎁</div>
-          <div className="notification-content">
-            <div className="notification-title">Birthday Reminder!</div>
-            <div className="notification-message">
-              It's Nick's birthday today! Would you like to send some birthday money?
-            </div>
-            <button className="notification-action" onClick={handleSendMoney}>
-              Send Birthday Money
-            </button>
-          </div>
-        </div>
-      )}
-
       <header className="app-header">
         <div className="header-icons">
           <span className="icon">✉️</span>
@@ -167,6 +146,25 @@ function FamilyGrandParent() {
               <span className="payment-amount">£100</span>
             </div>
           </div>
+        </section>
+        
+
+        <section className="bottom-cards">
+      <div className="cards-container">
+      <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
+        <div className="card-icon-wrapper" >
+          <div className="card-icon">📚</div>
+        </div>
+        <h3>Education Hub</h3>
+      </div>
+
+      <div className="card child-pot-card purple-card" onClick={() => navigate('/insights')}>
+        <div className="card-icon-wrapper">
+          <div className="card-icon">📊</div>
+        </div>
+        <h3>Family spending insights</h3>
+      </div>
+    </div>
         </section>
       </main>
     </div>
