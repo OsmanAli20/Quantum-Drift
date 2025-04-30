@@ -47,7 +47,10 @@ function Insights() {
       </header>
 
       <main className="account-summary">
-        <h2>Family Spending Insights</h2>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
+          <button className="back-button" onClick={() => navigate(-1)}>←</button>
+          <h2>Family Spending Insights</h2>
+        </div>
 
         <button className="generate-insights-button" onClick={() => navigate('/ai-insights')}>
           <span className="sparkle-icon">✨</span>
