@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/home';
 import Everyday from './pages/everyday';
@@ -11,12 +11,14 @@ import SavingGoals from './pages/savingGoals';
 import HelpGuide from './pages/helpGuide';
 import Insights from './pages/insights';
 import SavingGoalsChild from './pages/savingGoalsChild';
+import ScrollToTop from './components/scrollToTop';
 
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />} />
         <Route path="/family" element={<FamilyParent />} />
         <Route path="/family-child" element={<FamilyChild />} />
         <Route path="/family-grandparent" element={<FamilyGrandParent />} />
