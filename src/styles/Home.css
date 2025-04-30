@@ -845,3 +845,13 @@
 .chart-bar:hover .bar-fill {
   filter: brightness(1.1);
 } 
+.space-card.green-highlight {
+  background-color: #11b67a;
+  color: white;
+}
+
+.space-card.green-highlight h3,
+.space-card.green-highlight p,
+.space-card.green-highlight .chevron {
+  color: white;
+}
