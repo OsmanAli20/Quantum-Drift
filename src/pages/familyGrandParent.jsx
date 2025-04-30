@@ -132,7 +132,7 @@ function FamilyGrandParent() {
         <h3>Education Hub</h3>
       </div>
 
-      <div className="card child-pot-card purple-card">
+      <div className="card child-pot-card purple-card" onClick={() => navigate('/help-guide')}>
         <div className="card-icon-wrapper">
           <div className="card-icon">📊</div>
         </div>

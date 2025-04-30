@@ -1,6 +1,7 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/Home.css';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/Home.css";
+import AccountCard from "./AccountCard";
 
 function Home() {
   const navigate = useNavigate();
@@ -17,31 +18,33 @@ function Home() {
           </div>
         </div>
         <div className="tab-bar">
-          <button className="tab-button active" onClick={() => navigate('/')}>Summary</button>
-          <button className="tab-button" onClick={() => navigate('/family')}>Family</button>
-          <button className="tab-button" onClick={() => navigate('/family-child')}>Family (Child)</button>
-          <button className="tab-button" onClick={() => navigate('/family-grandparent')}>Family (Grandparent)</button>
-          <button className="tab-button" onClick={() => navigate('/everyday')}>Everyday</button>
+          <button className="tab-button active" onClick={() => navigate("/")}>
+            Summary
+          </button>
+          <button className="tab-button" onClick={() => navigate("/family")}>
+            Family
+          </button>
+          <button
+            className="tab-button"
+            onClick={() => navigate("/family-child")}
+          >
+            Family (Child)
+          </button>
+          <button
+            className="tab-button"
+            onClick={() => navigate("/family-grandparent")}
+          >
+            Family (Grandparent)
+          </button>
+          <button className="tab-button" onClick={() => navigate("/everyday")}>
+            Everyday
+          </button>
         </div>
       </header>
 
       <main className="account-summary">
-        <div className="account-card">
-          <div className="account-details">
-            <span className="account-name">Personal Current Account</span>
-            <span className="account-number">00-00-00 / 12345678</span>
-          </div>
-          <span className="account-balance">£2,023.00</span>
-        </div>
-
-        <div className="account-card">
-          <div className="account-details">
-            <span className="account-name">Mortgage Account</span>
-            <span className="account-number">987650234</span>
-          </div>
-          <span className="account-balance">£155,685.00</span>
-        </div>
-
+        {AccountCard({ id: 1 })}
+        {AccountCard({ id: 2 })}
         <div className="account-card">
           <div className="account-details">
             <span className="account-name">Credit Card</span>
@@ -49,19 +52,14 @@ function Home() {
           </div>
           <span className="account-balance">£1,237.23</span>
         </div>
-
-        <div className="account-card">
-          <div className="account-details">
-            <span className="account-name">Savings</span>
-            <span className="account-number">00-00-00 / 12345678</span>
-          </div>
-          <span className="account-balance">£5,000.00</span>
-        </div>
-
+        {AccountCard({ id: 4 })}
         <section className="spaces-section">
           <h2>Your spaces</h2>
-          
-          <div className="space-card green-bg" onClick={() => navigate('/bank360')}>
+
+          <div
+            className="space-card green-bg"
+            onClick={() => navigate("/bank360")}
+          >
             <div className="space-icon light-green">🏦</div>
             <div className="space-details">
               <h3>Lloyds Bank 360</h3>
@@ -70,7 +68,7 @@ function Home() {
             <span className="chevron">›</span>
           </div>
 
-          <div className="space-card" onClick={() => navigate('/everyday')}>
+          <div className="space-card" onClick={() => navigate("/everyday")}>
             <div className="space-icon light-green">📊</div>
             <div className="space-details">
               <h3>Everyday</h3>
@@ -79,7 +77,7 @@ function Home() {
             <span className="chevron">›</span>
           </div>
 
-          <div className="space-card" onClick={() => navigate('/save-invest')}>
+          <div className="space-card" onClick={() => navigate("/save-invest")}>
             <div className="space-icon orange">💰</div>
             <div className="space-details">
               <h3>Save & Invest</h3>
