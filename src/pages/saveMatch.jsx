@@ -10,15 +10,18 @@ function SaveMatch() {
   const [matchHistory, setMatchHistory] = useState([]);
 
   useEffect(() => {
+    // TODO: Replace with actual API call
     setChildSavings(1000); // Example value
   }, []);
 
   const handleMonthlyMatchChange = (event) => {
-    setMonthlyMatch(event.target.value);
+    const value = parseInt(event.target.value, 10);
+    setMonthlyMatch(value);
   };
 
   const handleYearlyMatchChange = (event) => {
-    setYearlyMatch(event.target.value);
+    const value = parseInt(event.target.value, 10);
+    setYearlyMatch(value);
   };
 
   const calculateMonthlyMatch = () => {
@@ -29,20 +32,20 @@ function SaveMatch() {
     return (childSavings * yearlyMatch) / 100;
   };
 
-  const handleManualMatch = () => {
+  const handleManualMatch = (type) => {
     const newMatch = {
       date: new Date().toLocaleDateString(),
-      amount: calculateMonthlyMatch(),
-      type: 'monthly'
+      amount: type === 'monthly' ? calculateMonthlyMatch() : calculateYearlyMatch(),
+      type: type
     };
-    setMatchHistory([...matchHistory, newMatch]);
+    setMatchHistory(prevHistory => [...prevHistory, newMatch]);
   };
 
   return (
     <div className="bank-app">
       <header className="app-header">
         <div className="header-icons">
-          <span className="icon">✉️</span>
+          <button className="back-button" onClick={() => navigate(-1)}>←</button>
           <span className="greeting">Hi Alex</span>
           <div className="right-icons">
             <span className="icon">❓</span>
@@ -83,9 +86,17 @@ function SaveMatch() {
                   value={monthlyMatch} 
                   onChange={handleMonthlyMatchChange}
                   className="slider"
+                  aria-label="Monthly match percentage"
                 />
                 <p>Match Amount: £{calculateMonthlyMatch().toFixed(2)}</p>
               </div>
+              <button 
+                className="match-trigger-button monthly"
+                onClick={() => handleManualMatch('monthly')}
+                aria-label="Trigger monthly match"
+              >
+                Trigger Monthly Match
+              </button>
             </div>
           </div>
 
@@ -102,9 +113,17 @@ function SaveMatch() {
                   value={yearlyMatch} 
                   onChange={handleYearlyMatchChange}
                   className="slider"
+                  aria-label="Yearly match percentage"
                 />
                 <p>Match Amount: £{calculateYearlyMatch().toFixed(2)}</p>
               </div>
+              <button 
+                className="match-trigger-button yearly"
+                onClick={() => handleManualMatch('yearly')}
+                aria-label="Trigger yearly match"
+              >
+                Trigger Yearly Match
+              </button>
             </div>
           </div>
 
@@ -112,17 +131,18 @@ function SaveMatch() {
             <div className="space-icon light-green">📝</div>
             <div className="space-details">
               <h3>Match History</h3>
-              <button className="match-button" onClick={handleManualMatch}>
-                Trigger Manual Match
-              </button>
               <div className="match-history">
-                {matchHistory.map((match, index) => (
-                  <div key={index} className="match-history-item">
-                    <p>Date: {match.date}</p>
-                    <p>Amount: £{match.amount.toFixed(2)}</p>
-                    <p>Type: {match.type}</p>
-                  </div>
-                ))}
+                {matchHistory.length > 0 ? (
+                  matchHistory.map((match, index) => (
+                    <div key={index} className="match-history-item">
+                      <p>Date: {match.date}</p>
+                      <p>Amount: £{match.amount.toFixed(2)}</p>
+                      <p>Type: {match.type === 'monthly' ? 'Monthly Match' : 'Yearly Match'}</p>
+                    </div>
+                  ))
+                ) : (
+                  <p className="no-history">No match history yet</p>
+                )}
               </div>
             </div>
           </div>
