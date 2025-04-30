@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
-function SavingGoals() {
+function SavingGoalsChild() {
   const navigate = useNavigate();
   
   // Dummy data for family members
@@ -134,4 +134,4 @@ function SavingGoals() {
   );
 }
 
-export default SavingGoals;
+export default SavingGoalsChild;
