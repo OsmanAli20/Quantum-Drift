@@ -10,7 +10,7 @@ function FamilyParent() {
       <header className="app-header">
         <div className="header-icons">
           <span className="icon">✉️</span>
-          <span className="greeting">Hi Alex</span>
+          <span className="greeting">Hi Alice</span>
           <div className="right-icons">
             <span className="icon">❓</span>
             <span className="icon">👥</span>
@@ -19,7 +19,7 @@ function FamilyParent() {
         <div className="tab-bar">
           <button className="tab-button" onClick={() => navigate('/')}>Summary</button>
           <button className="tab-button" onClick={() => navigate('/family')}>Family</button>
-          <button className="tab-button" onClick={() => navigate('/family-child')}>Family (Child)</button>
+          <button className="tab-button active" onClick={() => navigate('/family-child')}>Family (Child)</button>
           <button className="tab-button" onClick={() => navigate('/family-grandparent')}>Family (Grandparent)</button>
           <button className="tab-button" onClick={() => navigate('/everyday')}>Everyday</button>
         </div>
@@ -145,7 +145,6 @@ function FamilyParent() {
       <section className="feature-section">
         <h2>Upcoming Payments</h2>
       </section>
-      
       </main>
     </div>
   );
