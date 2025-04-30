@@ -19,7 +19,7 @@ function FamilyParent() {
         <div className="tab-bar">
           <button className="tab-button" onClick={() => navigate('/')}>Summary</button>
           <button className="tab-button" onClick={() => navigate('/family')}>Family</button>
-          <button className="tab-button active" onClick={() => navigate('/family-child')}>Family (Child)</button>
+          <button className="tab-button" active onClick={() => navigate('/family-child')}>Family (Child)</button>
           <button className="tab-button" onClick={() => navigate('/family-grandparent')}>Family (Grandparent)</button>
           <button className="tab-button" onClick={() => navigate('/everyday')}>Everyday</button>
         </div>
@@ -43,22 +43,9 @@ function FamilyParent() {
           <span className="account-balance">£1,500</span>
         </div>
 
-        <div className="space-card green-bg" onClick={() => navigate('/request-money')} style={{ cursor: 'pointer' }}>
-          <div className="space-icon light-green">💸</div>
-          <div className="space-details">
-            <h3>Request Money</h3>
-            <p>Request money from family members</p>
-          </div>
-          <span className="chevron">›</span>
-        </div>
-
-        <div className="space-card green-bg" onClick={() => navigate('/add-money')} style={{ cursor: 'pointer' }}>
-          <div className="space-icon light-green">➕</div>
-          <div className="space-details">
-            <h3>Add Money to Savings</h3>
-            <p>Transfer money to family savings</p>
-          </div>
-          <span className="chevron">›</span>
+        <div className="account-actions">
+          <button className="action-button">Request Money</button>
+          <button className="action-button">Add Money to Savings</button>
         </div>
 
         <section className="feature-section">
@@ -94,24 +81,6 @@ function FamilyParent() {
           </div>
         </div>
       </section>
-
-      <section className="bottom-cards">
-      <div className="cards-container">
-      <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
-        <div className="card-icon-wrapper" >
-          <div className="card-icon">📚</div>
-        </div>
-        <h3>Education Hub</h3>
-      </div>
-
-      <div className="card child-pot-card purple-card">
-        <div className="card-icon-wrapper">
-          <div className="card-icon">📊</div>
-        </div>
-        <h3>Family spending insights</h3>
-      </div>
-    </div>
-        </section>
 
         {/* Leaderboard */}
         <section className="feature-section">
@@ -165,6 +134,23 @@ function FamilyParent() {
           </div>
         </div>
       </section>
+      <section className="bottom-cards">
+      <div className="cards-container">
+      <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
+        <div className="card-icon-wrapper" >
+          <div className="card-icon">📚</div>
+        </div>
+        <h3>Education Hub</h3>
+      </div>
+
+      <div className="card child-pot-card purple-card" onClick={() => navigate('/insights')}>
+        <div className="card-icon-wrapper">
+          <div className="card-icon">📊</div>
+        </div>
+        <h3>Family spending insights</h3>
+      </div>
+    </div>
+        </section>
       </main>
     </div>
   );
