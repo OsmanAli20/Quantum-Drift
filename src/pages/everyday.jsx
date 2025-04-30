@@ -33,7 +33,7 @@ function Everyday() {
           </div>
         </div>
 
-        <div className="account-card">
+        <div className="account-card" onClick={() => navigate('/insights')} style={{ cursor: 'pointer' }}>
           <div className="account-details">
             <span className="account-name">Spending Insights</span>
             <p>View your spending patterns and categories</p>

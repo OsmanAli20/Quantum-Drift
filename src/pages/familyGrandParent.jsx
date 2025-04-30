@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
 function FamilyGrandParent() {
   const navigate = useNavigate();
+  const [showNotification, setShowNotification] = useState(true);
+
+  const handleSendMoney = () => {
+    navigate('/send-money');
+    setShowNotification(false);
+  };
 
   return (
     <div className="bank-app">
+      {showNotification && (
+        <div className="notification-popup">
+          <div className="notification-icon">🎁</div>
+          <div className="notification-content">
+            <div className="notification-title">Birthday Reminder!</div>
+            <div className="notification-message">
+              It's Nick's birthday today! Would you like to send some birthday money?
+            </div>
+            <button className="notification-action" onClick={handleSendMoney}>
+              Send Birthday Money
+            </button>
+          </div>
+        </div>
+      )}
+
       <header className="app-header">
         <div className="header-icons">
           <span className="icon">✉️</span>
