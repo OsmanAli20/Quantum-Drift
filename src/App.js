@@ -9,6 +9,7 @@ import FamilyGrandParent from './pages/familyGrandParent';
 import SaveMatch from './pages/saveMatch';
 import SavingGoals from './pages/savingGoals';
 import HelpGuide from './pages/helpGuide';
+import Insights from './pages/insights';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/save-match" element={<SaveMatch />} />
         <Route path="/saving-goals" element={<SavingGoals />} />
         <Route path="/help-guide" element={<HelpGuide />} />
+        <Route path="/insights" element={<Insights />} />
       </Routes>
     </div>
   );
