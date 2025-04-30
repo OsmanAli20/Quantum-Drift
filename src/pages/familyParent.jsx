@@ -59,6 +59,15 @@ function FamilyParent() {
             </div>
             <span className="chevron">›</span>
           </div>
+
+          <div className="space-card" onClick={() => navigate('/save-match')} style={{ cursor: 'pointer' }}>
+            <div className="space-icon light-green">💰</div>
+            <div className="space-details">
+              <h3>Savings Match</h3>
+              <p>Match your children's savings monthly and yearly</p>
+            </div>
+            <span className="chevron">›</span>
+          </div>
         </section>
       </main>
     </div>
