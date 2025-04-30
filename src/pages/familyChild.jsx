@@ -138,7 +138,12 @@ function FamilyParent() {
       <section className="bottom-cards">
         <div className="card shared-pot-card">
           <h3>Learn more about money</h3>
-        </div>
+        </div> 
+      </section>
+
+      {/* Upcoming Payments */}
+      <section className="feature-section">
+        <h2>Upcoming Payments</h2>
       </section>
       
       </main>
