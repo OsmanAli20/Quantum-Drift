@@ -25,6 +25,15 @@ function FamilyParent() {
       </header>
       <main className="account-summary">
         <h2>Family Banking</h2>
+
+        <div className="account-card">
+          <div className="account-details">
+            <span className="account-name">Personal Current Account</span>
+            <span className="account-number">00-00-00 / 12345678</span>
+          </div>
+          <span className="account-balance">£2,023.00</span>
+        </div>
+
         <div className="account-card">
           <div className="account-details">
             <span className="account-name">Family Savings</span>
@@ -32,18 +41,34 @@ function FamilyParent() {
           </div>
           <span className="account-balance">£10,000.00</span>
         </div>
+
+        <div className="account-card">
+          <div className="account-details">
+            <span className="account-name">Mortgage Account</span>
+            <span className="account-number">987650234</span>
+          </div>
+          <span className="account-balance">£155,685.00</span>
+        </div>
         
         <div className="account-card">
           <div className="account-details">
             <span className="account-name">Children's Account</span>
             <span className="account-number">00-00-00 / 98765432</span>
           </div>
-          <span className="account-balance">£2,500.00</span>
+          <span className="account-balance">£100.00</span>
+        </div>
+
+        <div className="account-card">
+          <div className="account-details">
+            <span className="account-name">Children's Account</span>
+            <span className="account-number">00-00-00 / 98765432</span>
+          </div>
+          <span className="account-balance">£130.00</span>
         </div>
 
         <section className="spaces-section">
           <h2>Family Features</h2>
-          <div className="space-card green-bg">
+          <div className="space-card green-bg" onClick={() => navigate('/family-sharing')} style={{ cursor: 'pointer' }}>
             <div className="space-icon light-green">👨‍👩‍👧‍👦</div>
             <div className="space-details">
               <h3>Family Sharing</h3>

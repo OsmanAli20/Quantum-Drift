@@ -17,7 +17,7 @@ body {
 }
 
 nav {
-  display: none; /* Hide the navigation since we don't need it for this view */
+  display: none;
 }
 
 .leaderboard {
