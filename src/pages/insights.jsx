@@ -49,7 +49,7 @@ function Insights() {
       <main className="account-summary">
         <h2>Family Spending Insights</h2>
 
-        <button className="ai-insights-button" onClick={() => navigate('/ai-insights')}>
+        <button className="generate-insights-button" onClick={() => navigate('/ai-insights')}>
           <span className="sparkle-icon">✨</span>
           Generate AI Insights
         </button>
