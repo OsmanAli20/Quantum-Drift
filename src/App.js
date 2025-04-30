@@ -7,8 +7,6 @@ import FamilyParent from './pages/familyParent';
 import SaveMatch from './pages/saveMatch';
 import FamilyChild from './pages/familyChild'; 
 import SavingGoals from './pages/savingGoals';
-import SavingsGoalsChild from './pages/savingGoalsChild';
-import FamilySharing from './pages/familySharing';
 
 function App() {
   return (
@@ -20,8 +18,6 @@ function App() {
         <Route path="/everyday" element={<Everyday />} />
         <Route path="/save-match" element={<SaveMatch />} />
         <Route path="/saving-goals" element={<SavingGoals />} />
-        <Route path="/saving-goals-child" element={<SavingsGoalsChild />} />
-        <Route path="/family-sharing" element={<FamilySharing />} />
       </Routes>
     </div>
   );

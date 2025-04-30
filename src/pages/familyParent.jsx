@@ -107,6 +107,10 @@ function FamilyParent() {
         </section>
 
       </main>
+      <div className="card space" onClick={() => navigate('/help-guide')} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', marginTop: '40px', marginLeft: '20px', width: 'fit-content' }}>
+        <span className="icon" style={{ fontSize: '24px', color: '#11b67a' }}>📚</span>
+        <h3>Education Hub</h3>
+      </div>
     </div>
   );
 };
