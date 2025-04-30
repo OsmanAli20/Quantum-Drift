@@ -77,23 +77,67 @@ function Insights() {
         </section>
 
         <section className="spaces-section">
-          <h3>Yearly Spending</h3>
-          <div className="chart-container">
-            {yearlySpending.map((person, index) => (
-              <div key={index} className="chart-bar">
-                <div className="bar-label">{person.name}</div>
-                <div className="bar-wrapper">
-                  <div 
-                    className="bar-fill" 
-                    style={{ width: `${(person.amount / Math.max(...yearlySpending.map(p => p.amount))) * 100}%` }}
-                  >
-                    <span className="bar-amount">£{person.amount}</span>
-                  </div>
-                </div>
+          <h3>Spending by Category</h3>
+          <div className="category-spending">
+            <div className="category-card">
+              <div className="space-icon light-green">🍽️</div>
+              <div className="category-details">
+                <h4>Food</h4>
+                <p>£1,200 this month</p>
               </div>
-            ))}
+            </div>
+            <div className="category-card">
+              <div className="space-icon light-green">🚌</div>
+              <div className="category-details">
+                <h4>Transport</h4>
+                <p>£650 this month</p>
+              </div>
+            </div>
+            <div className="category-card">
+              <div className="space-icon light-green">🎬</div>
+              <div className="category-details">
+                <h4>Entertainment</h4>
+                <p>£400 this month</p>
+              </div>
+            </div>
+            <div className="category-card">
+              <div className="space-icon light-green">🏠</div>
+              <div className="category-details">
+                <h4>Housing</h4>
+                <p>£2,000 this month</p>
+              </div>
+            </div>
           </div>
         </section>
+
+        <section className="spaces-section">
+        <h3>Top Merchants</h3>
+        <div className="top-merchants">
+          <div className="merchant-card">
+            <div className="merchant-icon">🛒</div>
+            <div className="merchant-details">
+              <h4>Tesco</h4>
+              <p>£450 spent</p>
+            </div>
+          </div>
+          <div className="merchant-card">
+            <div className="merchant-icon">📦</div>
+            <div className="merchant-details">
+              <h4>Amazon</h4>
+              <p>£320 spent</p>
+            </div>
+          </div>
+          <div className="merchant-card">
+            <div className="merchant-icon">☕</div>
+            <div className="merchant-details">
+              <h4>Starbucks</h4>
+              <p>£180 spent</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
 
         <section className="spaces-section">
           <h3>AI Savings Tips</h3>
