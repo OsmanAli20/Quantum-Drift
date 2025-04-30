@@ -9,7 +9,9 @@ function HelpGuide() {
   const ageGroups = [
     { id: '7-12', label: 'Ages 7-12', icon: '👶' },
     { id: '13-15', label: 'Ages 13-15', icon: '🧒' },
-    { id: '16-18', label: 'Ages 16-18', icon: '👱‍♂️' }
+    { id: '16-18', label: 'Ages 16-18', icon: '👱‍♂️' },
+    { id: 'adults', label: 'Adults', icon: '👨‍💼' },
+    { id: 'retirees', label: 'Retirees', icon: '👴' }
   ];
 
   const guides = {
@@ -80,6 +82,80 @@ function HelpGuide() {
         duration: '12 min',
         icon: '📚',
         description: 'Understanding credit and borrowing'
+      }
+    ],
+    'adults': [
+      {
+        title: 'Advanced Investment Strategies',
+        type: 'video',
+        duration: '15 min',
+        icon: '▶️',
+        description: 'Diversification and risk management'
+      },
+      {
+        title: 'Retirement Planning',
+        type: 'interactive',
+        duration: '25 min',
+        icon: '🎮',
+        description: 'Interactive retirement planning tool'
+      },
+      {
+        title: 'Tax Efficiency',
+        type: 'guide',
+        duration: '15 min',
+        icon: '📚',
+        description: 'Maximizing tax benefits and allowances'
+      },
+      {
+        title: 'Mortgage Management',
+        type: 'video',
+        duration: '12 min',
+        icon: '▶️',
+        description: 'Understanding mortgage options and refinancing'
+      },
+      {
+        title: 'Insurance Planning',
+        type: 'guide',
+        duration: '10 min',
+        icon: '📚',
+        description: 'Protecting your assets and family'
+      }
+    ],
+    'retirees': [
+      {
+        title: 'Pension Drawdown Strategies',
+        type: 'video',
+        duration: '12 min',
+        icon: '▶️',
+        description: 'Making the most of your retirement income'
+      },
+      {
+        title: 'Estate Planning',
+        type: 'interactive',
+        duration: '20 min',
+        icon: '🎮',
+        description: 'Planning your legacy and inheritance'
+      },
+      {
+        title: 'Tax-Efficient Withdrawals',
+        type: 'guide',
+        duration: '15 min',
+        icon: '📚',
+        description: 'Managing tax in retirement'
+      },
+      {
+        title: 'Healthcare Costs Planning',
+        type: 'video',
+        duration: '10 min',
+        icon: '▶️',
+        description: 'Planning for long-term care and medical expenses'
+      },
+      {
+        title: 'Inflation Protection',
+        type: 'guide',
+        duration: '12 min',
+        icon: '📚',
+        description: 'Safeguarding your purchasing power'
       }
     ]
   };
