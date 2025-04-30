@@ -674,7 +674,16 @@ h2 {
   padding: 1rem 0; /* 1rem top and bottom, 0 left and right */
 }
 
+
+.payment-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
 .payment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #f8f9fa;
   padding: 1rem;
   border-radius: 10px;
@@ -682,25 +691,24 @@ h2 {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-.payment-card h3 {
-  margin-top: 0;
-  font-size: 1.1rem;
-}
-
-.payment-info {
+.payment-left {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.payment-amount,
+.payment-text h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
 .payment-date {
-  display: block;
-  text-align: right;
+  font-size: 0.875rem;
+  color: #555;
 }
 
-.payment-info > span {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+.payment-right .payment-amount {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0077cc;
 }

@@ -108,21 +108,32 @@ function FamilyParent() {
         <h2>Upcoming Payments</h2>
 
         <div className="payment-card">
-          <h3>🎮 Nintendo Switch Pot</h3>
-          <div className="payment-info">
+          <div className="payment-left">
+            <div className="space-icon light-green">🎮</div>
+            <div className="payment-text">
+              <h3>Nintendo Switch Goal</h3>
+              <span className="payment-date">Due: May 5th</span>
+            </div>
+          </div>
+          <div className="payment-right">
             <span className="payment-amount">£20</span>
-            <span className="payment-date">Due: May 5th</span>
           </div>
         </div>
 
         <div className="payment-card">
-          <h3>🏖️ Holiday Pot</h3>
-          <div className="payment-info">
+          <div className="payment-left">
+            <div className="space-icon light-green">🏖️</div>
+            <div className="payment-text">
+              <h3>Family Holiday Goal</h3>
+              <span className="payment-date">Due: May 12th</span>
+            </div>
+          </div>
+          <div className="payment-right">
             <span className="payment-amount">£30</span>
-            <span className="payment-date">Due: May 12th</span>
           </div>
         </div>
       </section>
+
 
 
       
