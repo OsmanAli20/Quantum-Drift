@@ -1,30 +1,32 @@
 import React, { useEffect, useState } from "react";
 
-const AccountCard = () => {
+const AccountCard = ({ id }) => {
   const [account, setAccount] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Replace this URL with your actual API endpoint
-    fetch("http://127.0.0.1:3001/api/v1/accounts/1")
-      .then((res) => res.json())
-      .then((data) => {
-        setAccount(data);
+    fetch(`http://localhost:3001/api/v1/accounts/${id}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((json) => {
+        setAccount(json);
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Error fetching account data:", err);
+        console.error("Failed to fetch data:", err);
+        setError(err.message);
         setLoading(false);
       });
-  }, []);
+  }, [id]);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!account) {
-    return <div>No account data available.</div>;
-  }
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+  if (!account) return <div>No data available</div>;
 
   return (
     <div className="account-card">
