@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
-function Everyday() {
+function SaveInvest() {
+  const navigate = useNavigate();
+
   return (
     <div className="bank-app">
       <header className="app-header">
@@ -14,17 +17,17 @@ function Everyday() {
           </div>
         </div>
         <div className="tab-bar">
-          <button className="tab-button" onClick={() => window.location.href = '/'}>Summary</button>
-          <button className="tab-button active">Everyday</button>
-          <button className="tab-button" onClick={() => window.location.href = '/save-invest'}>Save &</button>
+          <button className="tab-button" onClick={() => navigate('/')}>Summary</button>
+          <button className="tab-button" onClick={() => navigate('/everyday')}>Everyday</button>
+          <button className="tab-button active">Save &</button>
         </div>
       </header>
       <main className="account-summary">
-        <h2>Everyday Banking</h2>
-        <p>Manage your daily finances and track your spending here.</p>
+        <h2>Save & Invest</h2>
+        <p>Explore your savings and investment options.</p>
       </main>
     </div>
   );
 }
 
-export default Everyday; 
+export default SaveInvest; 
