@@ -89,7 +89,7 @@ function FamilyGrandParent() {
         <section className="feature-section">
           <h2>Savings Goals</h2>
 
-          <div className="space-card" onClick={() => navigate('/saving-goals-grandparent')} style={{ cursor: 'pointer' }}>
+          <div className="space-card" onClick={() => navigate('/saving-goals')} style={{ cursor: 'pointer' }}>
             <div className="space-icon light-green">🚢</div>
             <div className="space-details">
               <h3>Mediterranean Cruise</h3>
@@ -132,7 +132,7 @@ function FamilyGrandParent() {
         <h3>Education Hub</h3>
       </div>
 
-      <div className="card child-pot-card purple-card" onClick={() => navigate('/help-guide')}>
+      <div className="card child-pot-card purple-card" onClick={() => navigate('/insights')}>
         <div className="card-icon-wrapper">
           <div className="card-icon">📊</div>
         </div>
