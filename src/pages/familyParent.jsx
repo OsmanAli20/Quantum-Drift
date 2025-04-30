@@ -149,14 +149,14 @@ function FamilyParent() {
 
         <div className="payment-card">
           <div className="payment-left">
-            <div className="space-icon light-green">🎮</div>
+            <div className="space-icon light-green">🎁</div>
             <div className="payment-text">
-              <h3>Nintendo Switch Goal</h3>
-              <span className="payment-date">Due: May 5th</span>
+              <h3>Christmas Fund</h3>
+              <span className="payment-date">Due: May 15th</span>
             </div>
           </div>
           <div className="payment-right">
-            <span className="payment-amount">£20</span>
+            <span className="payment-amount">£50</span>
           </div>
         </div>
 
@@ -169,7 +169,7 @@ function FamilyParent() {
             </div>
           </div>
           <div className="payment-right">
-            <span className="payment-amount">£30</span>
+            <span className="payment-amount">£100</span>
           </div>
         </div>
       </section>
