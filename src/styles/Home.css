@@ -585,4 +585,57 @@
   background-color: #11b67a;
   border-radius: 4px;
   transition: width 0.3s ease;
+}
+
+.age-group-selector {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 0 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.age-group-selector::-webkit-scrollbar {
+  display: none;
+}
+
+.age-group-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.age-group-button.active {
+  background-color: #11b67a;
+  color: white;
+}
+
+.age-icon {
+  font-size: 20px;
+}
+
+.guide-meta {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.guide-type {
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.guide-duration {
+  color: #11b67a;
 } 
