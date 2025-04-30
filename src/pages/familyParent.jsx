@@ -20,6 +20,7 @@ function FamilyParent() {
           <button className="tab-button" onClick={() => navigate('/')}>Summary</button>
           <button className="tab-button active">Family</button>
           <button className="tab-button" onClick={() => navigate('/family-child')}>Family (Child)</button>
+          <button className="tab-button" onClick={() => navigate('/family-grandparent')}>Family (Grandparent)</button>
           <button className="tab-button" onClick={() => navigate('/everyday')}>Everyday</button>
         </div>
       </header>
