@@ -97,19 +97,23 @@ function FamilyParent() {
         </section>
 
         <section className="bottom-cards">
-          <div className="card shared-pot-card pink-card">
-            <h3>Learn more about money</h3>
+          <div className="cards-container">
+          <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
+            <div className="card-icon-wrapper" >
+              <div className="card-icon">📚</div>
+            </div>
+            <h3>Education Hub</h3>
           </div>
-          
+
           <div className="card child-pot-card purple-card">
+            <div className="card-icon-wrapper">
+              <div className="card-icon">📊</div>
+            </div>
             <h3>Family spending insights</h3>
           </div>
+         </div>
         </section>
       </main>
-      <div className="card space" onClick={() => navigate('/help-guide')} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', marginTop: '40px', marginLeft: '20px', width: 'fit-content' }}>
-        <span className="icon" style={{ fontSize: '24px', color: '#11b67a' }}>📚</span>
-        <h3>Education Hub</h3>
-      </div>
     </div>
   );
 };

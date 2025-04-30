@@ -10,7 +10,7 @@ function FamilyParent() {
       <header className="app-header">
         <div className="header-icons">
           <span className="icon">✉️</span>
-          <span className="greeting">Hi Alice</span>
+          <span className="greeting">Hi Alex</span>
           <div className="right-icons">
             <span className="icon">❓</span>
             <span className="icon">👥</span>
@@ -19,7 +19,7 @@ function FamilyParent() {
         <div className="tab-bar">
           <button className="tab-button" onClick={() => navigate('/')}>Summary</button>
           <button className="tab-button" onClick={() => navigate('/family')}>Family</button>
-          <button className="tab-button active" onClick={() => navigate('/family-child')}>Family (Child)</button>
+          <button className="tab-button" onClick={() => navigate('/family-child')}>Family (Child)</button>
           <button className="tab-button" onClick={() => navigate('/family-grandparent')}>Family (Grandparent)</button>
           <button className="tab-button" onClick={() => navigate('/everyday')}>Everyday</button>
         </div>
@@ -134,17 +134,28 @@ function FamilyParent() {
           </div>
         </div>
       </section>
-
       <section className="bottom-cards">
-        <div className="card shared-pot-card">
-          <h3>Learn more about money</h3>
-        </div> 
-      </section>
+      <div className="cards-container">
+      <div className="card shared-pot-card pink-card" onClick={() => navigate('/help-guide')}>
+        <div className="card-icon-wrapper" >
+          <div className="card-icon">📚</div>
+        </div>
+        <h3>Education Hub</h3>
+      </div>
 
-      {/* Upcoming Payments */}
-      <section className="feature-section">
-        <h2>Upcoming Payments</h2>
-      </section>
+      <div className="card child-pot-card purple-card">
+        <div className="card-icon-wrapper">
+          <div className="card-icon">📊</div>
+        </div>
+        <h3>Family spending insights</h3>
+      </div>
+    </div>
+        </section>
+      <div className="card space" onClick={() => navigate('/help-guide')} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', marginTop: '40px', marginLeft: '20px', width: 'fit-content' }}>
+        <span className="icon" style={{ fontSize: '24px', color: '#11b67a' }}>📚</span>
+        <h3>Education Hub</h3>
+      </div>
+
       </main>
     </div>
   );

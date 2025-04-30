@@ -647,13 +647,7 @@
   padding: 20px;
 }
 
-.card {
-  padding: 20px 30px;
-  border-radius: 8px;
-  cursor: pointer;
-  flex: 1;
-  max-width: 300px;
-}
+
 
 .pink-card {
   background-color: #F5B2F2; 
@@ -661,4 +655,29 @@
 
 .purple-card {
   background-color: #A19FFF; 
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100%; /* Full width */
+  max-width: 100%; /* Prevent overflow */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.card-icon-wrapper {
+  background-color: rgba(241, 241, 241, 0.9);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon {
+  font-size: 1.5rem;
 }
