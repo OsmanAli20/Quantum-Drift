@@ -43,9 +43,22 @@ function FamilyParent() {
           <span className="account-balance">£1,500</span>
         </div>
 
-        <div className="account-actions">
-          <button className="action-button">Request Money</button>
-          <button className="action-button">Add Money to Savings</button>
+        <div className="space-card green-bg" onClick={() => navigate('/request-money')} style={{ cursor: 'pointer' }}>
+          <div className="space-icon light-green">💸</div>
+          <div className="space-details">
+            <h3>Request Money</h3>
+            <p>Request money from family members</p>
+          </div>
+          <span className="chevron">›</span>
+        </div>
+
+        <div className="space-card green-bg" onClick={() => navigate('/add-money')} style={{ cursor: 'pointer' }}>
+          <div className="space-icon light-green">➕</div>
+          <div className="space-details">
+            <h3>Add Money to Savings</h3>
+            <p>Transfer money to family savings</p>
+          </div>
+          <span className="chevron">›</span>
         </div>
 
         <section className="feature-section">
