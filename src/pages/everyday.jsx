@@ -19,6 +19,7 @@ function Everyday() {
         <div className="tab-bar">
           <button className="tab-button" onClick={() => navigate('/')}>Summary</button>
           <button className="tab-button" onClick={() => navigate('/family')}>Family</button>
+          <button className="tab-button" onClick={() => navigate('/family-child')}>Family (Child)</button>
           <button className="tab-button active">Everyday</button>
         </div>
       </header>
