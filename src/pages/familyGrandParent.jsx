@@ -7,6 +7,22 @@ function FamilyGrandParent() {
 
   return (
     <div className="bank-app">
+      {showNotification && (
+        <div className="notification-popup">
+          <button className="notification-close" onClick={() => setShowNotification(false)}>×</button>
+          <div className="notification-icon">🎁</div>
+          <div className="notification-content">
+            <div className="notification-title">Birthday Reminder!</div>
+            <div className="notification-message">
+              It's Nick's birthday today! Would you like to send some birthday money?
+            </div>
+            <button className="notification-action" onClick={handleSendMoney}>
+              Send Birthday Money
+            </button>
+          </div>
+        </div>
+      )}
+
       <header className="app-header">
         <div className="header-icons">
           <span className="icon">✉️</span>

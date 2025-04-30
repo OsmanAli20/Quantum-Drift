@@ -639,6 +639,7 @@
 .guide-duration {
   color: #11b67a;
 }
+
 .notification-popup {
   position: fixed;
   top: 20px;
@@ -646,6 +647,7 @@
   background: white;
   border-radius: 12px;
   padding: 16px;
+  padding-right: 36px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
@@ -654,6 +656,7 @@
   animation: slideIn 0.3s ease-out;
   border-left: 4px solid #11b67a;
   max-width: 300px;
+  position: relative;
 }
 
 .notification-icon {
