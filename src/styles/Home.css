@@ -639,10 +639,6 @@
 .guide-duration {
   color: #11b67a;
 }
-
-<<<<<<< HEAD
-
-=======
 .notification-popup {
   position: fixed;
   top: 20px;
@@ -659,7 +655,6 @@
   border-left: 4px solid #11b67a;
   max-width: 300px;
 }
->>>>>>> e7376d831d5ff68c48148041d0b3b5ae06ecc915
 
 .notification-icon {
   font-size: 24px;
@@ -668,33 +663,6 @@
 .notification-content {
   flex: 1;
 }
-<<<<<<< HEAD
-.card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  border-radius: 12px;
-  width: 100%; /* Full width */
-  max-width: 100%; /* Prevent overflow */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 1rem;
-}
-
-.card-icon-wrapper {
-  background-color: rgba(241, 241, 241, 0.9);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-icon {
-  font-size: 1.5rem;
-}
-=======
 
 .notification-title {
   font-weight: 600;
@@ -748,7 +716,7 @@
   font-size: 20px;
   font-weight: 500;
   display: flex;
-  align-items: center;
+  gap: 20px; 
   justify-content: center;
   gap: 12px;
   cursor: pointer;
@@ -793,31 +761,6 @@
   gap: 20px;
   margin: 24px 0;
   padding: 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.chart-bar {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.bar-label {
-  min-width: 80px;
-  font-weight: 500;
-  color: #333;
-}
-
-.bar-wrapper {
-  flex: 1;
-  height: 32px;
-  background-color: #f5f5f5;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
-  position: relative;
 }
 
 .bar-fill {
@@ -830,6 +773,35 @@
   transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+}
+
+.purple-card {
+  background-color: #A19FFF; 
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100%; /* Full width */
+  max-width: 100%; /* Prevent overflow */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+}
+
+.card-icon-wrapper {
+  background-color: rgba(241, 241, 241, 0.9);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon {
+  font-size: 1.5rem;
 }
 
 .bar-fill::after {
@@ -876,4 +848,3 @@
 .chart-bar:hover .bar-fill {
   filter: brightness(1.1);
 } 
->>>>>>> e7376d831d5ff68c48148041d0b3b5ae06ecc915
